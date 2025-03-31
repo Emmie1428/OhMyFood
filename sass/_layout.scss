@@ -1,0 +1,13 @@
+//body
+body {
+    @include mobile-first;
+    @include centered-presentation;
+    color:aqua;
+}
+
+//header
+header {
+    color:aqua;
+    
+
+}
