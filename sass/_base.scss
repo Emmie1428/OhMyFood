@@ -15,3 +15,16 @@ $font-size-h3:18px;
 $font-size-p:17px;
 $font-size-p-restaurant:15px;
 $font-size-li:16px;
+
+//Position
+mixin centered-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  mixin mobile-first {
+    max-width: 375px;
+    width:100%;
+    flex-direction: column;
+  }
