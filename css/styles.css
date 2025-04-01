@@ -4,11 +4,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-body img {
-  object-fit: cover;
-  width: 100%;
-}
 
+nav {
+  position: relative;
+}
 nav #logo {
   height: 30px;
   object-fit: contain;
@@ -19,6 +18,7 @@ nav .logo-nav-bar {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 nav .localisation {
   background-color: #EAEAEA;
@@ -38,9 +38,123 @@ nav .localisation input {
   width: 109px;
 }
 
-.resevation {
+.reservation {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 30px;
+}
+.reservation h2 {
+  font-size: 24px;
+  margin: 10px 15px;
+}
+.reservation p {
+  margin: 0 0 27px 0;
+  font-size: 18px;
+}
+.reservation input {
+  height: 50px;
+  color: white;
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 27px;
+}
+
+.functioning {
+  height: 324px;
+  padding: 48px 20px 68px 20px;
+}
+.functioning h2 {
+  font-size: 24px;
+  margin: 0 0 26px 0;
+}
+.functioning ul {
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 25px;
+}
+.functioning span {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 327px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 14.18px;
+  border-radius: 50px;
+  position: relative;
+  left: -3%;
+  font-weight: normal;
+}
+.functioning li {
+  height: 72.38px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.functioning i {
+  color: #7E7E7E;
+  margin: 0 23px 0 10px;
+  font-size: 18px;
+}
+
+.restaurants {
+  height: 1226px;
+  background-color: #F6F6F6;
+  padding: 54px 17px 106px 17px;
+}
+.restaurants h2 {
+  margin: 0;
+}
+.restaurants .restaurant-card {
+  background-color: #FFFFFF;
+  height: 251px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .restaurant-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .card-content {
+  height: 77px;
+}
+.restaurants .card-content h3 {
+  margin: 16px 0 5px 0;
+  font-size: 18px;
+}
+.restaurants .card-content p {
+  margin: 0;
+  font-size: 17px;
+}
+.restaurants .card-content i {
+  position: relative;
+  left: 87%;
+  bottom: 50%;
+  font-size: 22px;
+}
+.restaurants .new-restaurant {
+  position: relative;
+}
+.restaurants .new-restaurant p {
+  position: absolute;
+  z-index: 1;
+}
+.restaurants .new-restaurant img {
+  object-fit: cover;
+  width: 100%;
 }
