@@ -1,0 +1,46 @@
+body {
+  max-width: 375px;
+  width: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body img {
+  object-fit: cover;
+  width: 100%;
+}
+
+nav #logo {
+  height: 30px;
+  object-fit: contain;
+}
+nav .logo-nav-bar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  height: 63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .localisation {
+  background-color: #EAEAEA;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #353535;
+}
+nav .localisation input {
+  background-color: #EAEAEA;
+  border: none;
+  font-size: 16px;
+  margin-left: 17px;
+  color: #353535;
+  width: 109px;
+}
+
+.resevation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 327px;
+}

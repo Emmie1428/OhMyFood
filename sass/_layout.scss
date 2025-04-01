@@ -1,13 +1,50 @@
 //body
 body {
     @include mobile-first;
-    @include centered-presentation;
-    color:aqua;
+    font-family: $main-font;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
 }
+
 
 //header
-header {
-    color:aqua;
-    
+nav {
+    #logo {
+        height: 30px;
+        object-fit: contain;
+    }
 
+    .logo-nav-bar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        height: 63px;
+        @include centered-presentation;
+    }
+
+    .localisation {
+        background-color: $gray;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        height: 50px;
+        @include centered-presentation;
+        color: $dark-gray;
+    }
+
+    .localisation input {
+        background-color: $gray;
+        border:none;
+        font-size: $font-size-li-form-h2restaurant;
+        margin-left: 17px;
+        color: $dark-gray;
+        width: 109px;
+    }
 }
+
+//main
+
+    //reservation
+    .resevation {
+        @include centered-presentation;
+        height: 327px;
+    }

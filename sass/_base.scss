@@ -3,28 +3,33 @@ $primary-color:#9356DC;
 $secondary-color:#FF79DA;
 $tertiary-color:#99E2D0;
 
+  //Shade of gray
+  $light-gray:#F6F6F6;
+  $gray:#EAEAEA;
+  $dark-gray:#353535;
+
 //Fonts
 $main-font:'Roboto', sans-serif;
 $logo-title-font:'Shrikhand', sans-serif;
 
 //Font size
-$font-size-h1:28px;
+$font-size-h1: 28px;
 $font-size-h2: 24px;
-$font-size-h2-restaurant:16px;
-$font-size-h3:18px;
-$font-size-p:17px;
-$font-size-p-restaurant:15px;
-$font-size-li:16px;
+$font-size-h3: 18px;
+$font-size-p: 17px;
+$font-size-li-form-h2restaurant: 16px;
+$font-size-p-restaurant: 15px;
 
 //Position
-mixin centered-presentation {
+@mixin centered-presentation {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  mixin mobile-first {
+@mixin mobile-first {
     max-width: 375px;
-    width:100%;
-    flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
+
