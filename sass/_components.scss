@@ -9,41 +9,27 @@
     font-family: $main-font;
     font-size: $font-size-li-components-h2restaurant;
     padding: 0 20px;
+}
 
+@mixin gree-button{
+    height: 29px; 
+    background-color: $tertiary-color;
+    border-radius: 2px;
+    box-shadow: $shadow-nav-new;
 }
 
 //Retaurants cards
 @mixin restaurant-card{
     background-color: #FFFFFF;
     height: 251px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px;
 }
+
 @mixin restaurant-card-image{
         object-fit: cover;
         width: 100%;
         height: 174px;
         border-radius: 15px 15px 0 0;
-}
-
-@mixin restaurant-card-content{
-    height: 77px;
-    
-
-    h3{
-        margin: 16px 0 5px 0; 
-        font-size: $font-size-h3-subtitle; 
-    }
-
-    p {
-        margin: 0;
-        font-size: $font-size-p;
-    }
-
-    i{
-        position: relative;
-        left: 87%;
-        bottom: 50%;
-        font-size: 22px;
-    }
+        object-position: center;
 }
 

@@ -4,78 +4,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>OhMyFood</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head> 
 <body> 
     <header> 
-        <nav> 
-            <div class="logo-nav-bar">
-                <img  src="../Assets/Images/logo/ohmyfood.png" alt="logo ohmyfood" id="logo"> 
+        <nav class="nav"> 
+            <div class="nav__logo-bar">
+                <img  src="../Assets/Images/logo/ohmyfood.png" alt="logo ohmyfood" class="nav__logo"> 
             </div>
-            <div class="localisation"> <form method="get"> 
+            <div class="nav__localisation"> <form method="get"> 
                 <label for="localisation"><i class="fa-solid fa-location-dot"></i></label> 
-                <input type="text" value="Paris, Belleville" name="localisation" id="localisation">
+                <input type="text" value="Paris, Belleville" name="localisation" class="nav__localisation-input">
             </form>
             </div> 
         </nav>
     </header>
     <main>
         <section class="reservation">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>Décrouvrer des restaurants d'exception, sélectionnés par nos soins.</p>
-            <input type="button" value="Explorer nos restaurants">
+            <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
+            <p class="reservation__subtitle">Décrouvrer des restaurants d'exception, sélectionnés par nos soins.</p>
+            <input type="button" value="Explorer nos restaurants" class="reservation__btn">
         </section>
         <section class="functioning">
-            <h2>Fonctionnement</h2>
-                <ul class="functioning-steps">
-                    <li><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
-                    <li><span>2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
-                    <li><span>3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
+            <h2 class="functioning__title">Fonctionnement</h2>
+                <ul class="functioning__steps">
+                    <li class="functioning__steps-li"><span class="functioning__steps-number">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+                    <li class="functioning__steps-li"><span class="functioning__steps-number">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
+                    <li class="functioning__steps-li"><span class="functioning__steps-number">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                 </ul>
         </section>
         <section class="restaurants">
-            <h2>Restaurants</h2>
-            <article class="restaurant-card">
-                <div class="new-restaurant">
-                    <p>Nouveau<img src="../Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette de tapas"></p>
+            <h2 class="restaurants__title">Restaurants</h2>
+            <article class="restaurants__card">
+                <div class="restaurants__card-new">
+                    <p>Nouveau</p><img class="restaurants__card-img" src="../Assets/Images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette de tapas">
                 </div>
-                <div class="card-content">
-                    <h3>La palette du goût</h3>
-                     <p>Ménilmontrant</p>
+                <div class="restaurants__card-content">
+                    <h3 class="restaurants__card-content-title">La palette du goût</h3>
+                     <p class="restaurants__card-content-subtitle">Ménilmontrant</p>
                      <i class="fa-regular fa-heart"></i>
                  </div>
             </article>
-            <article class="restaurant-card">
-                <div class="new-restaurant">
-                    <p>Nouveau <img src="../Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Assitte poulet et accompagnements"></p>
+            <article class="restaurants__card">
+                <div class="restaurants__card-new">
+                    <p>Nouveau</p><img class="restaurants__card-img" src="../Assets/Images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Assitte poulet et accompagnements">
                 </div>
-                <div class="card-content">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+                <div class="restaurants__card-content">
+                    <h3 class="restaurants__card-content-title">La note enchantée</h3>
+                    <p class="restaurants__card-content-subtitle">Charonne</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </article>
-            <article class="restaurant-card">
-                <img src="../Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assitte d'oeuf bénédictine">
-                <div class="card-content">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
+            <article class="restaurants__card">
+                <img  class="restaurants__card-img"src="../Assets/Images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assitte d'oeuf bénédictine">
+                <div class="restaurants__card-content">
+                    <h3 class="restaurants__card-content-title">À la française</h3>
+                    <p class="restaurants__card-content-subtitle">Cité Rouge</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </article>
-            <article class="restaurant-card">
-                <img src="../Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Assiette de poisson">
-                <div class="card-content">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
+            <article class="restaurants__card">
+                <img  class="restaurants__card-img"src="../Assets/Images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Assiette de poisson">
+                <div class="restaurants__card-content">
+                    <h3 class="restaurants__card-content-title">Le délice des sens</h3>
+                    <p class="restaurants__card-content-subtitle">Folie-Méricourt</p>
                     <i class="fa-regular fa-heart"></i>
                 </div>
             </article>
         </section>
     </main>
-    <footer>
-        <img src="../Assets/Images/logo/ohmyfood.png" alt="logo OhMyFood">
-        <ul>
+    <footer class="footer">
+        <img src="../Assets/Images/logo/ohmyfood.png" alt="logo ohmyfood" class="footer__logo"> 
+        <ul class="footer__links">
             <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
             <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
             <li>Mentions légales</li>
