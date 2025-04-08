@@ -9,6 +9,7 @@
     font-family: $main-font;
     font-size: $font-size-li-components-h2restaurant;
     padding: 0 20px;
+    cursor: pointer;
 }
 
 @mixin gree-button{
@@ -23,13 +24,21 @@
     background-color: #FFFFFF;
     height: 251px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 @mixin restaurant-card-image{
-        object-fit: cover;
-        width: 100%;
-        height: 174px;
-        border-radius: 15px 15px 0 0;
-        object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 174px;
+    border-radius: 15px 15px 0 0;
+    object-position: center;
 }
 
+@mixin heart-style{
+    position: absolute;
+    left: 90%;
+    bottom: 35%; 
+     transform: translateY(-50%);
+    font-size: 24px;
+}
