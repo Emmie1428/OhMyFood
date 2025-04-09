@@ -29,7 +29,7 @@ body {
   justify-content: center;
   color: #353535;
 }
-.nav__localisation-input {
+.nav__localisation-search {
   background-color: #EAEAEA;
   border: none;
   font-family: "Roboto", sans-serif;
@@ -200,20 +200,25 @@ body {
 .restaurants__card-content-hearts {
   position: relative;
   font-size: 24px;
-  transform: translateY(-130%) translateX(90%);
+  height: 21px;
+  width: 22px;
+  transform: translateY(-170%) translateX(1250%);
 }
 .restaurants__card-content .empty-heart {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  opacity: 1;
+  background-color: white;
+  transition: opacity, transform 25ms;
+  transform-origin: top;
+  animation-fill-mode: forwards;
 }
-.restaurants__card-content .empty-heart:hover {
+.restaurants__card-content .empty-heart:active {
+  transform: scaleY(0);
   opacity: 0;
-  transition: opacity 250ms;
 }
 .restaurants__card-content .purple-heart {
-  background: linear-gradient(180deg, #9356DC, #FF79DA);
   position: absolute;
-  z-index: -1;
-  opacity: 1;
+  background: linear-gradient(180deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -27,7 +27,7 @@ body {
         @include centered-presentation;
         color: $dark-gray;
     
-        &-input { 
+        &-search { 
             background-color: $gray;
             border:none;
             font-family: $main-font;
