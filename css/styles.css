@@ -186,7 +186,6 @@ body {
   right: 10px;
 }
 .restaurants__card-content {
-  position: relative;
   height: 77px;
   margin: 10px 20px 12px 16px;
 }
@@ -198,31 +197,23 @@ body {
   margin: 0;
   font-size: 17px;
 }
-.restaurants__card-content__hearts {
-  position: absolute;
-  left: 90%;
-  bottom: 35%;
-  transform: translateY(-50%);
+.restaurants__card-content-hearts {
+  position: relative;
   font-size: 24px;
+  transform: translateY(-130%) translateX(90%);
 }
 .restaurants__card-content .empty-heart {
-  z-index: 2;
-  transition: opacity 0.2s;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.restaurants__card-content .empty-heart:hover {
+  opacity: 0;
+  transition: opacity 250ms;
 }
 .restaurants__card-content .purple-heart {
   background: linear-gradient(180deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  z-index: 1;
-  background-size: 100% 0%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s;
-}
-.restaurants__card-content .empty-heart:active {
-  opacity: 0;
-}
-.restaurants__card-content .empty-heart:active + .purple-heart {
-  background-size: 100% 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
 }

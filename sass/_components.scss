@@ -36,9 +36,6 @@
 }
 
 @mixin heart-style{
-    position: absolute;
-    left: 90%;
-    bottom: 35%; 
-     transform: translateY(-50%);
+    
     font-size: 24px;
 }
