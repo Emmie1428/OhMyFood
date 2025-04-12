@@ -40,59 +40,59 @@
 .loader {
     position: fixed;
     z-index: 10;
-    background-color: $gray;
+    background-color: $dark-gray;
     width: 100%;
     height: 100%;
-    animation: loader 3s;
+    animation: loader 150ms 1900ms forwards;
     @include centered-presentation;
 
     &__ingredients {
-        position: relative;
-        font-size: 35px;
-        animation: spin 2s linear infinite; 
+        @include centered-absolute;
+        font-size: 45px;
+        color: transparent;
+        animation: spin-and-shrink 600ms 600ms ease-in forwards; 
         animation-timing-function: linear;
         will-change: transform;
-
+        
         i {
-            position: absolute;
-            &.fa-solid.fa-carrot {
-                transform: rotate(0deg) translate(100px) rotate(-0deg);
-            }
-            &.fa-solid.fa-fish {
-                transform: rotate(120deg) translate(100px) rotate(-160deg);
-            }
-            &.fa-solid.fa-lemon {
-                transform: rotate(240deg) translate(100px) rotate(-240deg);
-            }
+            @include centered-absolute;
+            @include icon-linear-gradient;
         }
+    
+        .fa-solid.fa-carrot {
+            transform: translate(-20%, -50%) rotate(0deg) translateY(-90px) rotate(0deg);
+        }
+        
+        .fa-solid.fa-fish {
+            transform: translate(-20%, -50%) rotate(120deg) translateY(-90px) rotate(-120deg);
+        }
+        
+        .fa-solid.fa-lemon {
+            transform: translate(-20%, -50%) rotate(240deg) translateY(-90px) rotate(-240deg);
+        }
+    
     }
         
         &__utensils {
             opacity:0;
-            font-size: 35px;
-            animation: pop-in 0.5s ease-out forwards;
-            animation-delay: 1s;
+            font-size: 60px;
+            color: $tertiary-color;
+            animation: pop-in 350ms ease-out forwards;
+            animation-delay: 1200ms;
+            
         }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 @keyframes spin-and-shrink {
     0% {
-        transform: rotate(0) scale(1);
+        transform: rotate(0);
     }
-    50% {
-        transform: rotate(180deg) scale(0.8);
+    85% {
+        transform: rotate(470deg);
     }
     100% {
-        transform: rotate(360deg) scale(0);
+        transform: rotate(520deg) scale(0);
+       
     }
 }
 
@@ -101,10 +101,23 @@
         transform: scale(0);
         opacity: 0;
     }
+    90% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
 
+@keyframes loader {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

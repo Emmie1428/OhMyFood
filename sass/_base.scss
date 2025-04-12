@@ -8,6 +8,14 @@ $tertiary-color:#99E2D0;
   $gray:#EAEAEA;
   $dark-gray:#353535;
 
+  //Icon linear-gradient
+  @mixin icon-linear-gradient{
+    background: linear-gradient(180deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
 //Fonts
 $main-font:'Roboto', sans-serif;
 $logo-title-font:'Shrikhand', sans-serif;
@@ -41,9 +49,15 @@ $shadow-function: 0 4px 15px rgba(0, 0, 0, .15);
     margin: 0;
   }
 
-  @mixin list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-  }
+@mixin list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+}
+
+@mixin centered-absolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

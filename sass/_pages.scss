@@ -150,15 +150,12 @@
                 &:active {
                     transform: scaleY(0);
                     opacity: 0;
-                    
                 }
             }
         
             .purple-heart {
                 position: absolute;
-                background: linear-gradient(180deg, $primary-color, $secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @include icon-linear-gradient;
             }
         }  
     }
