@@ -73,11 +73,12 @@
             color:#7E7E7E;
             margin: 0 23px 0 10px;
             font-size: 18px;
+                &:hover {
+                    color: $primary-color;
+                }
         }
 
-        .fa-store {
-            color: $primary-color;
-        }
+        
     }
 }
 

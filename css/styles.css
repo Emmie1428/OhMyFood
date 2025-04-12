@@ -1,3 +1,73 @@
+.loader {
+  position: fixed;
+  z-index: 10;
+  background-color: #EAEAEA;
+  width: 100%;
+  height: 100%;
+  animation: loader 3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__ingredients {
+  position: relative;
+  font-size: 35px;
+  animation: spin 2s linear infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+.loader__ingredients .circle {
+  animation: spin 2s linear infinite;
+  position: relative;
+}
+.loader__ingredients .circle i {
+  position: absolute;
+}
+.loader__ingredients .circle i.fa-solid.fa-carrot {
+  transform: rotate(0deg) translate(100px) rotate(0deg);
+}
+.loader__ingredients .circle i.fa-solid.fa-fish {
+  transform: rotate(120deg) translate(100px) rotate(-160deg);
+}
+.loader__ingredients .circle i.fa-solid.fa-lemon {
+  transform: rotate(240deg) translate(100px) rotate(-240deg);
+}
+.loader__ingredients__utensils {
+  opacity: 0;
+  font-size: 35px;
+  animation: pop-in 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-and-shrink {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+  }
+}
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 body {
   max-width: 375px;
   width: 100%;
@@ -140,7 +210,7 @@ body {
   margin: 0 23px 0 10px;
   font-size: 18px;
 }
-.functioning__steps .fa-store {
+.functioning__steps i:hover {
   color: #9356DC;
 }
 
