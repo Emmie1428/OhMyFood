@@ -2,6 +2,10 @@
 body {
     @include mobile-first;
     font-family: $main-font;
+
+    @media screen and (max-width: 1440px) {
+        @include large-desktop;
+    }
 }
 
 //header
@@ -11,6 +15,10 @@ body {
     &__logo {
         height: 30px;
         object-fit: contain;
+
+        @media screen and (min-width: 1440px) {
+            height: 34px;
+        }
     }
 
     &__logo-bar {
@@ -35,6 +43,7 @@ body {
             margin-left:17px;
             color: $dark-gray;
             width: 109px;
+            font-weight: 500;
         }
     }
 }

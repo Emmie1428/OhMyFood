@@ -2,12 +2,10 @@
   position: fixed;
   z-index: 10;
   background-color: #353535;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
   animation: loader 150ms 1900ms forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .loader__ingredients {
   position: absolute;
@@ -43,6 +41,9 @@
   color: #99E2D0;
   animation: pop-in 350ms ease-out forwards;
   animation-delay: 1200ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 @keyframes spin-and-shrink {
@@ -84,7 +85,13 @@ body {
   max-width: 375px;
   width: 100%;
   margin: 0;
+  place-self: center;
   font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 1440px) {
+  body {
+    max-width: 1440px;
+  }
 }
 
 .nav {
@@ -93,6 +100,11 @@ body {
 .nav__logo {
   height: 30px;
   object-fit: contain;
+}
+@media screen and (min-width: 1440px) {
+  .nav__logo {
+    height: 34px;
+  }
 }
 .nav__logo-bar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -119,6 +131,7 @@ body {
   margin-left: 17px;
   color: #353535;
   width: 109px;
+  font-weight: 500;
 }
 
 .footer {
@@ -153,9 +166,22 @@ body {
   font-size: 24px;
   margin: 10px 15px;
 }
+@media screen and (min-width: 1440px) {
+  .reservation__title {
+    font-size: 40px;
+    margin: 1px 0;
+  }
+}
 .reservation__subtitle {
   margin: 0 0 27px 0;
   font-size: 18px;
+  color: #353535;
+  font-weight: 300;
+}
+@media screen and (min-width: 1440px) {
+  .reservation__subtitle {
+    margin: 30.5px 0;
+  }
 }
 .reservation__btn {
   height: 50px;
@@ -175,14 +201,25 @@ body {
   opacity: 0.8;
   box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 1440px) {
+  .reservation__btn {
+    margin: 0;
+  }
+}
 
 .functioning {
   height: 324px;
   padding: 48px 20px 68px 20px;
 }
+@media screen and (max-width: 1440px) {
+  .functioning {
+    padding: 50px 180px;
+    height: 128px;
+  }
+}
 .functioning__title {
   font-size: 24px;
-  margin: 0 0 26px 0;
+  margin: 0 0 25px 0;
 }
 .functioning__steps {
   font-family: "Roboto", sans-serif;
@@ -191,6 +228,12 @@ body {
   margin: 0;
   display: grid;
   gap: 25px;
+}
+@media screen and (max-width: 1440px) {
+  .functioning__steps {
+    display: flex;
+    gap: 36px;
+  }
 }
 .functioning__steps-li {
   height: 72.38px;

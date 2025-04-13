@@ -9,11 +9,23 @@
     &__title {
       font-size: $font-size-h2;
       margin: 10px 15px;
+      
+      @media screen and (min-width: 1440px) {
+        font-size: 40px;
+        margin: 1px 0;
+        
+        }
     }
 
     &__subtitle {
         margin:0 0 27px 0;   
         font-size: $font-size-h3-subtitle;
+        color: $dark-gray;
+        font-weight: 300;
+        
+        @media screen and (min-width: 1440px) {
+            margin: 30.5px 0;
+        }
     }
 
     &__btn {
@@ -25,8 +37,11 @@
                 opacity: .80;
                 box-shadow: $shadow-button-hover;
             }
-    }
 
+        @media screen and (min-width: 1440px) {
+            margin: 0;
+        }
+    }
  }
 
  //Functioning
@@ -34,15 +49,25 @@
     height: 324px;
     padding: 48px 20px 68px 20px;
 
+    @media screen and (max-width: 1440px) {
+        padding: 50px 180px;
+        height: 128px;
+    }
+
     &__title {
         font-size: $font-size-h2;
-        margin: 0 0 26px 0;
+        margin: 0 0 25px 0;
     }
 
     &__steps {
         font-family: $main-font;
         @include list;
         gap: 25px;
+
+        @media screen and (max-width: 1440px) {
+            display: flex;
+            gap: 36px;
+        }
 
         &-li {
             height: 72.38px;
@@ -77,8 +102,6 @@
                     color: $primary-color;
                 }
         }
-
-        
     }
 }
 
@@ -88,6 +111,9 @@
     background-color: $light-gray;
     padding:54px 17px 106px 17px;
 
+    
+    
+
     &__title {
         margin: 0 0 20px 0;
     }
@@ -95,6 +121,9 @@
     &__card {
         @include restaurant-card;
         margin-bottom: 18px;
+
+       
+        
 
         &-img {
             @include restaurant-card-image
