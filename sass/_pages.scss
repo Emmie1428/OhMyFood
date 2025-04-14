@@ -10,7 +10,7 @@
       font-size: $font-size-h2;
       margin: 10px 15px;
       
-      @media screen and (min-width: 1440px) {
+      @media screen and (min-width: 1024px) {
         font-size: 40px;
         margin: 1px 0;
         
@@ -23,7 +23,7 @@
         color: $dark-gray;
         font-weight: 300;
         
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1024px) {
             margin: 30.5px 0;
         }
     }
@@ -38,7 +38,7 @@
                 box-shadow: $shadow-button-hover;
             }
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1024px) {
             margin: 0;
         }
     }
@@ -49,9 +49,18 @@
     height: 324px;
     padding: 48px 20px 68px 20px;
 
-    @media screen and (max-width: 1440px) {
-        padding: 50px 180px;
+    @media screen and (min-width: 420px) {
+        padding: 30px 10%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 30px 50px;
         height: 128px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 50px 180px;
+        
     }
 
     &__title {
@@ -63,8 +72,9 @@
         font-family: $main-font;
         @include list;
         gap: 25px;
+        margin-left: 14px;
 
-        @media screen and (max-width: 1440px) {
+        @media screen and (min-width: 1024px) {
             display: flex;
             gap: 36px;
         }
@@ -90,8 +100,12 @@
             font-size: 14.18px;
             border-radius:50px;
             position: relative;
-            left: -3%;
+            left: -4%;
             font-weight: normal;
+
+            @media screen and (min-width: 768px) {
+                left: -2.5%;
+            }
         }
                 
         i {
@@ -111,9 +125,29 @@
     background-color: $light-gray;
     padding:54px 17px 106px 17px;
 
-    
-    
+    @media screen and (min-width: 420px) {
+        padding: 30px 10%;
+        height: auto;
+    }
 
+    @media screen and (min-width: 1024px) {
+        padding: 30px 50px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 30px 180px;
+    }
+
+    &__card-display{
+        @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        row-gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+    }
+    
     &__title {
         margin: 0 0 20px 0;
     }
@@ -122,11 +156,19 @@
         @include restaurant-card;
         margin-bottom: 18px;
 
-       
+        @media screen and (min-width: 1024px) {
+            width: 45.25%;
+            margin: 0;
+        }
         
-
         &-img {
-            @include restaurant-card-image
+            @include restaurant-card-image;
+            object-position: 50% 70%;
+        }
+
+        &-img-portrait {
+            @include restaurant-card-image;
+            object-position: 50% 57%;
         }
 
         &-new {
@@ -166,6 +208,14 @@
                 height: 21px;
                 width: 22px;
                 transform: translateY(-170%) translateX(1250%);
+
+                @media screen and (min-width: 1024px) {
+                    transform: translateY(-170%) translateX(1600%);
+                }
+
+                @media screen and (min-width: 1440px) {
+                    transform: translateY(-170%) translateX(1900%);
+                }
             }
         
             .empty-heart {
