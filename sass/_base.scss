@@ -35,6 +35,12 @@ $shadow-button: 0 4px 10px rgba(0, 0, 0, .25);
 $shadow-button-hover: 0px 4px 13px rgba(0, 0, 0, .4);
 $shadow-function: 0 4px 15px rgba(0, 0, 0, .15);
 
+//Links
+
+@mixin invisible-link {
+  text-decoration: none;
+  color: black;
+}
 
 //Position
 @mixin centered-presentation {

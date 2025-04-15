@@ -1,0 +1,58 @@
+//Restaurant's pages
+
+.menu {
+    @include mobile-first;
+    
+    &__img {
+        @include restaurant-card-image;
+        height: 275px;
+    }
+
+    &__container {
+        border-radius: 40px 40px 0 0;
+        background-color: $light-gray;
+        position: absolute;
+        top: 42%;
+        width: 100%;
+        padding: 32px 17px;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: $font-size-h1;
+        font-family: $logo-title-font;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &-hearts{
+        position: absolute;
+        font-size: 24px;
+        height: 21px;
+        width: 22px;
+        right: 15%;
+        top: 6%;
+        transform: translateY(-50%);
+    }
+
+    .empty-heart {
+        position: absolute;
+        z-index: 2;
+        background-color: white;
+        transition: opacity, transform 25ms ;
+        transform-origin: top;
+        animation-fill-mode: forwards;
+
+        &:active {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+    }
+
+    .purple-heart {
+        position: absolute;
+        @include icon-linear-gradient;
+    }
+
+
+}
