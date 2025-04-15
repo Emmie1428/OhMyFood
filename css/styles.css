@@ -240,10 +240,10 @@ body {
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  padding: 0 20px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 27px;
+  padding: 0 20px;
   transition: all 350ms ease-in-out;
 }
 .reservation__btn:hover {
@@ -467,18 +467,15 @@ body {
 .menu__img {
   object-fit: cover;
   width: 100%;
-  border-radius: 15px 15px 0 0;
-  height: 174px;
   height: 275px;
 }
 .menu__container {
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  position: absolute;
-  top: 42%;
-  width: 100%;
+  position: relative;
+  margin-top: -13%;
+  width: auto;
   padding: 32px 17px;
-  z-index: 1;
 }
 .menu__title {
   font-size: 28px;
@@ -486,14 +483,15 @@ body {
   font-weight: 400;
   margin: 0;
 }
-.menu-hearts {
+.menu__hearts {
   position: absolute;
   font-size: 24px;
   height: 21px;
   width: 22px;
-  right: 15%;
-  top: 6%;
+  right: 10%;
+  top: 5.5%;
   transform: translateY(-50%);
+  background-color: transparent;
 }
 .menu .empty-heart {
   position: absolute;
@@ -502,6 +500,7 @@ body {
   transition: opacity, transform 25ms;
   transform-origin: top;
   animation-fill-mode: forwards;
+  background-color: #F6F6F6;
 }
 .menu .empty-heart:active {
   transform: scaleY(0);
@@ -513,4 +512,34 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.menu__subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+.menu__order-btn {
+  height: 50px;
+  color: white;
+  background: linear-gradient(360deg, #9356DC, #FF79DA);
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 0 48px;
+  display: flex;
+  place-self: anchor-center;
+  transition: all 350ms ease-in-out;
+}
+.menu__order-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 1024px) {
+  .menu__order-btn {
+    margin: 0;
+  }
 }
