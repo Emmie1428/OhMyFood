@@ -589,6 +589,7 @@ body {
   }
 }
 .menu__meal {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 39px;
@@ -598,6 +599,9 @@ body {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.menu__meal:active .menu__meal-selected {
+  transform: translateX(0);
 }
 .menu__meal-title {
   font-size: 18px;
@@ -623,9 +627,10 @@ body {
   color: #353535;
 }
 .menu__meal-selected {
-  position: relative;
-  left: 92.5%;
-  top: -48%;
+  position: absolute;
+  right: -59px;
+  top: 0;
+  bottom: 0;
   height: 69px;
   width: 59px;
   display: flex;
@@ -634,5 +639,5 @@ body {
   color: white;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
-  display: none;
+  transition: transform 0.5s;
 }
