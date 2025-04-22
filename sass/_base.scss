@@ -37,7 +37,6 @@ $shadow-function: 0 4px 15px rgba(0, 0, 0, .15);
 $shadow-meal: 0 4px 15px rgba(0, 0, 0, .10);
 
 //Links
-
 @mixin invisible-link {
   text-decoration: none;
   color: black;
@@ -72,4 +71,10 @@ $shadow-meal: 0 4px 15px rgba(0, 0, 0, .10);
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+@mixin hidden-overflow {
+  white-space: nowrap;        
+  overflow: hidden;          
+  text-overflow: ellipsis; 
 }
