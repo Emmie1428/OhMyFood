@@ -377,6 +377,7 @@ body {
   border-radius: 15px;
   cursor: pointer;
   margin-bottom: 18px;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .restaurants__card {
@@ -429,16 +430,16 @@ body {
   margin: 0;
   font-size: 17px;
 }
-.restaurants__card-content-hearts {
+.restaurants__card-hearts {
   position: absolute;
   font-size: 24px;
   height: 21px;
   width: 22px;
-  right: 8px;
-  top: 30%;
+  right: 25px;
+  bottom: 20px;
   transform: translateY(-50%);
 }
-.restaurants__card-content .empty-heart {
+.restaurants__card .empty-heart {
   position: absolute;
   z-index: 1;
   background-color: white;
@@ -446,11 +447,11 @@ body {
   transform-origin: top;
   animation-fill-mode: forwards;
 }
-.restaurants__card-content .empty-heart:active {
+.restaurants__card .empty-heart:active {
   transform: scaleY(0);
   opacity: 0;
 }
-.restaurants__card-content .purple-heart {
+.restaurants__card .purple-heart {
   position: absolute;
   background: linear-gradient(180deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -469,60 +470,78 @@ body {
     max-width: 1440px;
   }
 }
-.menu__img {
+.menu__img, .menu__img-portrait {
   object-fit: cover;
   width: 100%;
   height: 275px;
   object-position: 50% 75%;
 }
 @media screen and (min-width: 768px) {
-  .menu__img {
-    object-position: 50% 80%;
+  .menu__img, .menu__img-portrait {
+    object-position: 50% 60%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu__img {
+  .menu__img, .menu__img-portrait {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu__img, .menu__img-portrait {
     height: 383px;
-    object-position: 50% 55%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .menu__img-portrait, .menu__img-portrait-portrait {
+    object-position: 50% 45%;
+  }
+}
+@media screen and (min-width: 550px) {
+  .menu__img-portrait, .menu__img-portrait-portrait {
+    object-position: 50% 60%;
   }
 }
 .menu__container {
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
   position: relative;
-  margin-top: -13%;
+  margin-top: -55px;
   width: auto;
   padding: 32px 13px 40px 13px;
 }
 @media screen and (min-width: 425px) {
   .menu__container {
-    padding: 32px 10% 40px 10%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 @media screen and (min-width: 768px) {
   .menu__container {
-    width: 73%;
+    width: 60%;
     place-self: center;
-    margin-top: -4%;
+    margin-top: -40px;
+    padding-top: 51px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu__container {
     width: 55%;
-    padding: 51px 110px 40px 110px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 @media screen and (min-width: 1440px) {
   .menu__container {
     width: 44%;
-    padding: 51px 210px 40px 210px;
+    padding-left: 210px;
+    padding-right: 210px;
   }
 }
 .menu__title {
   font-size: 28px;
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 0 4px;
 }
 @media screen and (min-width: 768px) {
   .menu__title {
@@ -534,25 +553,22 @@ body {
   font-size: 24px;
   height: 21px;
   width: 22px;
-  right: 15%;
-  top: 4.5%;
+  right: 12%;
+  top: 4.2%;
   transform: translateY(-50%);
   background-color: transparent;
 }
 @media screen and (min-width: 768px) {
   .menu__hearts {
-    justify-self: anchor-center;
-    left: 450px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu__hearts {
-    left: 320px;
+    justify-self: center;
+    left: 415px;
+    top: 6%;
+    margin-left: 24px;
   }
 }
 @media screen and (min-width: 1440px) {
   .menu__hearts {
-    left: 320px;
+    left: 428px;
   }
 }
 .menu .empty-heart {
@@ -595,7 +611,7 @@ body {
   padding: 0 48px;
   margin-top: 40px;
   display: flex;
-  place-self: anchor-center;
+  place-self: center;
   transition: all 350ms ease-in-out;
 }
 .menu__order-btn:hover {
@@ -654,8 +670,11 @@ body {
 }
 .menu__meal:active .menu__meal-subtitle-price {
   transform: translateX(-59px);
-  margin-left: 60px;
+  padding-left: 60px;
   transition: transform 200ms linear;
+}
+.menu__meal:active .menu__meal-title {
+  padding-right: 100px;
 }
 .menu__meal:not(:active) .menu__meal-selected {
   transition: transform 200ms linear;
@@ -669,6 +688,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: transform 200ms linear;
 }
 .menu__meal-subtitle {
   font-size: 15px;

@@ -160,6 +160,7 @@
     &__card {
         @include restaurant-card;
         margin-bottom: 18px;
+        position: relative;
 
         @media screen and (min-width: 1024px) {
             width: 45.25%;
@@ -169,12 +170,12 @@
         &-img {
             @include restaurant-card-image;
             object-position: 50% 70%;
-        }
 
-        &-img-portrait{
-            @include restaurant-card-image;
-            object-position: 50% 60%;
-            }
+            &-portrait{
+                @include restaurant-card-image;
+                object-position: 50% 60%;
+             }
+        }
 
         &-new {
             position:relative;
@@ -205,36 +206,35 @@
                 margin: 0;
                 font-size: $font-size-p;
             }
-            
-            &-hearts{
-                position: absolute;
-                font-size: 24px;
-                height: 21px;
-                width: 22px;
-                right:8px;
-                top:30%;
-                transform: translateY(-50%);
-            }
-        
-            .empty-heart {
-                position: absolute;
-                z-index: 1;
-                background-color: white;
-                transition: opacity, transform 25ms ;
-                transform-origin: top;
-                animation-fill-mode: forwards;
-    
-                &:active {
-                    transform: scaleY(0);
-                    opacity: 0;
-                }
-            }
-        
-            .purple-heart {
-                position: absolute;
-                @include icon-linear-gradient;
-            }
+        }
 
+        &-hearts{
+            position: absolute;
+            font-size: 24px;
+            height: 21px;
+            width: 22px;
+            right:25px;
+            bottom: 20px;
+            transform: translateY(-50%);
+        }
+    
+        .empty-heart {
+            position: absolute;
+            z-index: 1;
+            background-color: white;
+            transition: opacity, transform 25ms ;
+            transform-origin: top;
+            animation-fill-mode: forwards;
+    
+            &:active {
+                transform: scaleY(0);
+                opacity: 0;
+            }
+        }
+    
+        .purple-heart {
+            position: absolute;
+            @include icon-linear-gradient;
         }
     }
 }
