@@ -3,3 +3,7 @@
 @import 'layout';
 @import 'main-page';
 @import 'restaurants';
+
+---
+---
+@import "{{ site.theme }}";

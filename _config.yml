@@ -2,11 +2,14 @@ title: Mon Projet OhMyFood
 description: Un site web pour mon projet
 theme: jekyll-theme-minimal
 
-# Configuration GitHub Pages
+
 github:
   is_project_page: true
   repository_url: https://github.com/Emmie1428/OhMyFood
 
-# Configuration de base
+
 source: .
 destination: ./_site
+
+sass:
+  style: compressed
