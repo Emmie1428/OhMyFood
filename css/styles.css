@@ -554,7 +554,7 @@ body {
   height: 21px;
   width: 22px;
   right: 12%;
-  top: 4.2%;
+  top: 4%;
   transform: translateY(-50%);
   background-color: transparent;
 }
@@ -597,6 +597,7 @@ body {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   margin-top: 40px;
+  height: 27px;
 }
 .menu__order-btn {
   height: 50px;
@@ -707,7 +708,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .menu__meal-subtitle-price {
   font-weight: bold;
