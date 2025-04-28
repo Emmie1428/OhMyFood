@@ -10,6 +10,3 @@ github:
 
 source: .
 destination: ./_site
-
-sass:
-  style: compressed
