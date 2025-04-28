@@ -1,3 +1,7 @@
+---
+---
+@import "{{ site.theme }}";
+
 .loader {
   position: fixed;
   z-index: 10;
