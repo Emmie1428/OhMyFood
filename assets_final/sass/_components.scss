@@ -1,0 +1,122 @@
+//Button
+@mixin purple-button{
+    height: 50px;
+    color:white;
+    background: linear-gradient(360deg, $primary-color, $secondary-color);
+    border-radius:25px;
+    border: none;
+    font-family: $main-font;
+    font-size: $font-size-li-components-h2restaurant;
+    cursor: pointer;
+}
+
+@mixin green-button {
+    height: 29px; 
+    background-color: $tertiary-color;
+    border-radius: 2px;
+    box-shadow: $shadow-nav-new;
+}
+
+//Retaurants cards
+@mixin restaurant-card {
+    background-color: #FFFFFF;
+    height: 251px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@mixin restaurant-card-image {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    height: 174px;
+}
+
+//Loader
+
+.loader {
+    position: fixed;
+    z-index: 10;
+    background-color: $dark-gray;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    animation: loader 150ms 1900ms forwards;
+    
+
+    &__ingredients {
+        @include centered-absolute;
+        font-size: 45px;
+        color: transparent;
+        animation: spin-and-shrink 600ms 600ms ease-in forwards; 
+        animation-timing-function: linear;
+        will-change: transform;
+        
+        i {
+            @include centered-absolute;
+            @include icon-linear-gradient;
+        }
+    
+        .fa-solid.fa-carrot {
+            transform: translate(-20%, -50%) rotate(0deg) translateY(-90px) rotate(0deg);
+        }
+        
+        .fa-solid.fa-fish {
+            transform: translate(-20%, -50%) rotate(120deg) translateY(-90px) rotate(-120deg);
+        }
+        
+        .fa-solid.fa-lemon {
+            transform: translate(-20%, -50%) rotate(240deg) translateY(-90px) rotate(-240deg);
+        }
+    
+    }
+        
+        &__utensils {
+            opacity:0;
+            font-size: 60px;
+            color: $tertiary-color;
+            animation: pop-in 350ms ease-out forwards;
+            animation-delay: 1200ms;
+            @include centered-absolute;
+            
+        }
+}
+
+@keyframes spin-and-shrink {
+    0% {
+        transform: rotate(0);
+    }
+    85% {
+        transform: rotate(470deg);
+    }
+    100% {
+        transform: rotate(520deg) scale(0);
+       
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
